@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- тэг для определения ширины экрана при адаптиве -->
+		<link type="image/x-icon" rel="shortcut icon" href="/favicon.ico"> <!-- Видимо иконка страницы -->
+		<title>Заголовок страницы</title>
+		<meta name="description" content="Описание страницы" />	
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- Шрифты -->
+		<link href="style.css" type="text/css"  rel="stylesheet" /> <!-- Подключение CSS файла -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" type="text/css" rel="stylesheet" />
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Ссылка на скрипт, ниже что-то подключает скрипты фото и видео -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="libs/jquery/jquery.fancybox.css">
+	</head>
+	<body>			
+		<div class="wrapper">	
+			<header class="header">
+				<div class="big-container">
+					<div class="header-top">
+						<a href="index.html">
+							<img id="logo-mini" src="img/logo-test.svg" alt="">
+							<img id="logo" src="img/logo.svg" alt="">
+						</a>
+						<nav class="navigation"> 
+							<a href="about.html">О студии</a>
+							<a href="services.html">Услуги</a>
+							<a href="portfolio.html">Портфолио</a>
+							<a href="contacts.html">Контакты</a>
+						</nav>
+						<span class="menu-icon"><img src="img/menu.svg" alt=""></span>
+						<div class="header-phone">
+							<a href="tel:+79158888888" class="tel">+7 915 888 88 88</a>	
+							<a href="tel:+79158888888" id="tel-mini"><img src="img/tel-mini.svg" alt=""></a>
+						</div>
+						<div class="header-order">
+							<a data-fancybox data-src="#animatedModal" href="" class="btn">Оформить заказ</a>
+						</div>
+					</div>
+				</div>			
+			</header>
+			<div class="content content-page">
+				<div class="container">
+					<div class="breadcrumbs">
+						<a href="index.html">Главная</a>
+						<span>/</span>
+						Портфолио
+					</div>
+					<h1>Портфолио</h1>
+				</div>
+				<section class="section section-foto section-foto-mimi-page">
+					<div class="container">
+						<div class="subtitle">Мы для вас собрали подборку проектов, которые были нами реализованы. Здесь представлена некоторая мебель и интерьеры, которые мы реализовали на заказ нашей командой</div>
+						<div class="foto-grid">						
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item1.jpg"><img src="img/foto-item1.jpg" alt="">
+								<div class="foto-plus1"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item2.jpg"><img src="img/foto-item2.jpg" alt="">
+								<div class="foto-plus2"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item3.jpg"><img src="img/foto-item3.jpg" alt="">
+								<div class="foto-plus"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item4.jpg"><img src="img/foto-item4.jpg" alt="">
+								<div class="foto-plus"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item5.jpg"><img src="img/foto-item5.jpg" alt="">
+								<div class="foto-plus"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item6.jpg"><img src="img/foto-item6.jpg" alt="">
+								<div class="foto-plus2"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item7.jpg"><img src="img/foto-item7.jpg" alt="">
+								<div class="foto-plus"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item8.jpg"><img src="img/foto-item8.jpg" alt="">
+								<div class="foto-plus"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item9.jpg"><img src="img/foto-item9.jpg" alt="">								
+								<div class="foto-plus1"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+							<div class="foto-item">
+								<a data-fancybox="gallery" data-src="img/foto-item10.jpg"><img src="img/foto-item10.jpg" alt="">								
+								<div class="foto-plus2"><img src="img/plus.svg" alt=""></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section section-order">
+					<div class="container">
+						<h2>Давайте обсудим ваш заказ!</h2>
+						<div class="subtitle">Отправьте нам свои контактные данные. Мы с вами свяжемся, пригласим в офис для знакомства и консультации. Выслушаем вас и обязательно предложим интересные решения.</div>
+						<div class="order">							
+							<div class="order-form">							
+								<form>								
+									<input type="text" placeholder="Имя" />
+									<input type="text" placeholder="Телефон" />
+									<textarea placeholder="Напишите, что вас интересует?" /></textarea>
+									<span class="form-text">Нажимая на кнопку, я подтверждаю свое согласие на обработку введенных персональных данных</span>
+									<input class="btn" type="button" value="Отправить">
+								</form>
+							</div>
+							<div class="order-img"><img src="img/order.jpg" alt=""></div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer class="footer">				
+					<div class="container">
+						<div class="navigation-footer">
+							<div class="footer-mail">
+							<p>Оставьте свою электронную почту, и мы будем отправлять вам новости нашей студии и интересные идеи по дизайну мебели, интерьера помещения</p>
+							<form action="#" method="get">
+								<input type="text" class="email-txt" placeholder="Введите свой e-mail" />						
+								<button  class="submit"><img src="img/arrow.svg" alt=""> </button>
+							</form>
+							</div>
+							<div class="navigation-footer-hover">
+								<ul>
+									<li><a class="element_footer" href="about.html">О студии</a></li>
+									<li><a href="services.html">Услуги</a></li>
+									<li><a href="portfolio.html">Портфолио</a></li>
+								</ul>
+								<ul>	
+									<li><a href="reviews.html">Отзывы</a></li>
+									<li><a href="contacts.html">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="contact-footer-box">
+								<div class="contact-footer">
+									<div class="tel-footer"><a href="tel:+79158888888" class="tel2">+7 915 888 88 88</a></div>
+									<div class="adres-footer"><a href="mailto: info@artm.ru" class="mail">info@artm.ru<a/></div>
+									<div class="adres-footer">г. Москва, ул. Советская, 50</div>
+								</div>
+									<a data-fancybox data-src="#animatedModal" href="" class="btn">Заказать проект</a>
+							</div>
+						</div>
+					</div>
+				<div class="footer-item">
+					<div class="title-footer">Mebel Art</div>
+					<div>© 2021  Студия дизайнерской мебели</div>
+				</div>		
+			</footer>			
+		</div>
+	<script src="libs/jquery/jquery-3.6.1.min.js"></script>
+	<script src="libs/jquery/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="script.js"></script> <!-- Подключение Джава-скрипт файла -->
+	<div class="modal" id="animatedModal">
+		<div class="form-box form-box--popup">
+			<h2>Отправьте нам заявку</h2>
+			<form>								
+				<input type="text" placeholder="Имя">
+				<input type="text" placeholder="Телефон">
+				<textarea placeholder="Напишите, что вас интересует?"></textarea>
+				<span class="form-text">Нажимая на кнопку, я подтверждаю свое согласие на обработку введенных персональных данных</span>
+				<input class="btn" type="button" value="Отправить">
+			</form>
+		</div>
+	</div>
+	</body>
+</html>

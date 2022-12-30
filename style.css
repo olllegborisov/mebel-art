@@ -1,0 +1,1614 @@
+/*** Классы, тэги относящиеся к разным секциям ***/
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 140%;
+	color: #343434;
+	background-color: #fbf2f2;
+}
+/* Отвечает за построение всей страницы, ставит секции друг под другом */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header, footer, nav, section {
+	display: block;
+}
+/* Всё содержимое сайта */
+.content {
+    flex: 1 1 auto;
+    margin-bottom: 120px;
+}
+/* Указывает ширину определённой области, так как берется стандартный контейнер удобно копировать решение. Должен быть один вид container */
+.big-container {
+	max-width: 1580px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.container {
+	max-width: 1400px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+/* Отвечает за отступы между секциями */
+.section {
+	margin-top: 120px;
+}
+/* Заголовки секции, встречаются часто поэтому выделены в отдельный тэг */
+h2 {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 110%;
+	color: #493B33;
+	margin-top: 0;
+	margin-bottom: 32px;
+	text-align: center;
+}
+/* Настройки подзаголовка */
+.subtitle {
+	max-width: 650px;
+	margin: 0 auto 64px;
+	text-align: center;
+}
+/* Настройки форм, частро встречаются - надо их использовать одинаковым, повторяющимся тэгом */
+input[type=text] {
+	border: 1px solid #DA804E;
+	border-radius: 6px;
+	padding: 20px;
+	color: #453B47;
+	width: 100%;
+	box-sizing: border-box; 
+}
+input[type=text]::placeholder {
+	color: #453B47
+}
+textarea {
+	border: 1px solid #DA804E;
+	border-radius: 6px;
+	padding: 20px;
+	color: #453B47
+}
+input:focus {
+	outline-color: #DA804E;
+}
+textarea::placeholder {
+	color: #453B47
+}
+textarea:focus {
+	outline-color: #DA804E;
+}
+/* Убирает зазор под картинкой. Хорошо видно в форме футера, на кнопке отправить*/
+img {
+	display: block;
+}
+.content-page h1 {
+	font-weight: 500;
+    font-size: 64px;
+    line-height: 100%;
+    color: #493B33;
+	margin-top: 32px;
+}
+/* Настройка кнопок, так как используется в разных секциях оставил здесь */
+.btn {
+	padding: 20px 48px;
+	background-color: #DA804E;
+	border-radius: 8px;
+	color: #fff;
+	text-decoration: none;
+	line-height: 100%;
+	font-weight: 500;
+	font-size: 16px;
+	transition: 0.3s ease-in-out; /*animation*/
+	cursor: pointer; /* Изменение курсора при наведение на активную область */
+}
+.btn:hover {
+	background-color: #A34F4F;
+}
+.btn2 {
+	background-color: #DA804E;
+	border-radius: 8px;
+	color: #fff;
+	text-decoration: none;
+	line-height: 100%;
+	font-weight: 500;
+	font-size: 16px;
+	transition: 0.3s ease-in-out; /*animation*/
+	cursor: pointer; /* Изменение курсора при наведение на активную область */
+}
+.btn2:hover {
+	background-color: #A34F4F;
+}
+/* выключение всплывающего меню в определённый момент */
+.menu-icon {
+		display: none;
+}
+/* Всплывающее окно закз */
+.modal {
+  display: none;
+}
+.modal .btn {
+	 border: #DA804E
+}
+.form-box--popup {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-box--popup input {
+	margin-bottom: 20px;
+}
+.form-box--popup textarea {
+	max-width: 700px;
+    width: 100%;
+	margin-bottom: 10px;
+	resize: none;
+	max-height: 120px;
+    height: 100%;
+}
+.form-box--popup .btn {
+	margin-top: 25px;
+    margin-left: 70%;
+    padding: 16px 40px;
+}
+.form-box--popup .form-text {
+    font-size: 14px;
+	display: flex;
+}
+.form-box--popup input::placeholder, .form-box--popup textarea::placeholder {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 100%;
+}
+.form-box--popup input[type=text]:focus {
+	border: 2px solid #DA804E;
+}
+.breadcrumbs {
+	margin-top: 32px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+}
+.breadcrumbs a {
+	color: #DA804E;
+	text-decoration: none;
+}
+.breadcrumbs a:hover {	
+	text-decoration: underline;
+}
+
+.breadcrumbs span {
+	margin: 0 10px;
+}
+.section-foto-mimi-page {
+	margin-top: 70px;
+}
+.section-decisions-mini-page {
+	margin-top: 50px;
+}
+/*** Классы относящиеся к шапке сайта ***/
+
+/* Подчеркивание шапки сайта */
+#logo-mini {
+	display: none;
+}
+#tel-mini {
+	display: none;
+}
+.header {
+	border-bottom: 1px solid #DCDCDC;
+}
+/* Расстановка элементов */
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/* Расстановка элементов навигации плюс эфект подчеркивания при наведении */
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 446px;
+	width: 100%;	
+	margin-left: 146px;
+	margin-right: 210px;
+	font-weight: 400;
+	
+}
+.navigation a {
+	color: #343434;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 100%;
+	padding: 8px 0 8px 0;
+	border-bottom: 1px solid #fbf2f2;
+	transition: 0.3s ease-in-out;
+}
+.navigation a:hover {
+	color: #A34F4F;
+	border-bottom: 1px solid #A34F4F;
+ /* text-underline-offset: 8px; before / after псевдоэлемент */	
+}
+/* Настройка элемента телефон */
+.header-phone {
+	margin-right: 221px;
+}
+.tel {
+	font-weight: 500;
+	font-size: 18px;
+	color: #DA804E;
+	text-decoration: none;
+	line-height: 100%;
+}
+.tel2 {
+	color: #fff;
+	text-decoration: none;
+}
+.tel3 {
+    color: #DA804E;
+	text-decoration: none;
+}
+.mail {
+	color: #fff;
+	text-decoration: none;
+}
+.mail2 {
+	color: #DA804E;
+	text-decoration: none;
+}
+/*** Классы относятся к первой секции ***/
+
+/* Отступ от шапки */
+.section-about {
+	margin-top: 77px;
+}
+/* Настройка шрифтов цветов, отступов, а так же расположения элементов первой секции */
+.about-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.about-box h1{
+	font-weight: 500;
+	font-size: 84px;
+	line-height: 100%;
+	color: #493B33;
+	max-width: 752px;
+	margin: 0;
+}
+.about-box p {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 160%;
+	max-width: 704px;
+	margin-top: 48px;
+	margin-bottom: 31px;
+}
+/* Настройка отступов, шрифтов, расположения элементов левой части первого сектора */
+.about-left {
+	max-width: 813px;
+	width: 100%;
+	margin-top: -13px;
+}
+.about-left h1 {
+	margin-top: 17px;
+}
+.about-left input[type=text] {
+	margin-right: 24px;
+	width: auto;
+}
+.about-left input {
+	max-width: 270px;
+}
+.about-left form {
+	display: flex;
+	justify-content: space-between;
+	max-height: 56px;
+}
+.about-left input::placeholder {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 100%;
+}
+/* Настройка слайдера, ширины, кнопок и ховер эфекта */
+.top-slider {
+	max-width: 506px;
+	width: 100%;
+}
+.top-slider .swiper-button-prev {
+	width: 48px;
+	height: 48px;
+	background-image: url("img/left.svg");
+	background-repeat: no-repeat; 
+	position: absolute;
+	bottom: 16px;
+	right: 72px;
+	top: auto;
+	left: auto;
+}
+.top-slider .swiper-button-prev:hover {
+	background-image: url("img/left-hover.svg");
+}
+.top-slider .swiper-button-next {
+	width: 48px;
+	height: 48px;
+	background-image: url("img/right.svg");
+	background-repeat: no-repeat; 
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+	top: auto;
+}
+.top-slider img {
+	max-width: 100%;
+	height: auto;
+
+}
+/* Так же по поводу кнопок-стрелок когда мы установили позицию "right 0; bottom 0;" кнопки выстроились по умлочанию не так как было нужно. 
+А все из-за того, что ранее уже были прописанны в скрипте значения top и left. 
+Соответственно что бы кнопки встали на нужное место нужно обнулить значения. 
+Что мы и делаем: "top: auto; left: auto" */
+.top-slider .swiper-button-next:hover {
+	background-image: url("img/right-hover.svg");
+}
+/* Ниже мы убриаем автоматически подставляемые программой кнопки(стрелки) вместо которых мы создаем свои */
+.swiper-button-prev::after {
+	display: none;
+}
+.swiper-button-next::after {
+	display: none;
+}
+.about-left .btn2 {
+	border: none;
+	width: 100%;
+}
+/*** Классы управляющие секцией со всплывающими описаниями ***/
+
+/* Расположение элементов в целом в секции */
+.decisions-img {	
+	display: flex;
+    justify-content: space-between;
+ }
+ /* Ширина, а так же цвета элементов и цвета при наведении курсора */
+.decisions-item {
+	position: relative;
+	max-width: 345px;
+	max-height: 606px;
+	color: #fff;
+ }
+.decisions-item::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5); 
+	transition: 0.3s ease-in-out;
+}
+.decisions-item:hover::before {
+	background-color: rgba(0,0,0,.8);
+}
+.decisions-item img {
+	max-width: 100%;
+	height: auto;
+
+}
+/* Шрифт и размер заголовка внутри элемента, а также анимация и добовление всплывающего текста и кнопки */
+.decisions-bottom {
+	position: absolute;
+    left: 48px;
+    bottom: 48px;
+    z-index: 2;
+}
+ .decisions-bottom-title {
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 100%;
+	color: #EAE2E2;
+ }
+.decisions-sample-bottom-form {
+	display: none;	
+}
+.decisions-sample-bottom-form {
+	display: none;
+	transition: all ease-in-out 1.5s;
+}
+.decisions-sample-bottom-form .btn {
+	display: inline-block;
+	text-align: center;
+	padding: 20px 67px;
+}
+.decisions-item:hover .decisions-sample-bottom-form {
+	 animation: hovertext 1s alternate; /* Название анимации, скорость воспроизведенияю, тип анимации */
+	 display: block;
+}
+@keyframes hovertext { /* (название анимации)анимации погуглить */
+  0%   {margin-bottom: -100px;  opacity: 0; } /* (этапы проигрывания анимации) */
+  40% { opacity: 0;}
+  100% {margin-bottom: 0;  opacity: 1;}
+}
+.decisions-sample-bottom-txt {
+	margin-top: 16px;
+    margin-bottom: 24px;
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    color: #EAE2E2;
+    font-weight: 300;
+    max-width: 256px;
+}
+
+/*** Классы отвечающие за секцию со слайдером ***/
+
+/* Уточнение ширины, для точного отображение по макету */
+.section-popular-positions h2{
+	max-width: 956px;
+	margin: 0 auto;
+	margin-bottom: 65px;
+}
+/* Ширина и отступы слайдера */
+.slider {
+    max-width: 1826px;
+    margin: 47px auto 0 auto;
+	
+}
+/* Указываем родителя картинки для фиксации позиции, ниже параметры "стикера с текстом",
+ параметры кнопок слайдера, выключение стандратных кнопок,
+ а так же отступ под слайдером из паддингов для того что бы увидеть кнопки */
+.popular-img {
+	position: relative;
+}
+.popular-img img {
+	max-width: 100%;
+	height: auto;
+
+}
+.popular-sticker {
+	display: flex;
+    flex-direction: column;
+	max-width: 314px;
+	background-color: #DA804E;
+	padding: 32px 40px 40px 32px;
+    box-sizing: border-box;
+	color: #fff;
+	position: absolute;
+	top: 147px;
+    left: 252px;
+	width: 100%;
+}
+.popular-txt {
+	font-weight: 500;
+	line-height: 100%;
+	padding-bottom: 16px;
+}
+.popular-txt2 {
+	font-size: 16px;
+	line-height: 120%;
+}
+.slider .swiper-button-prev-1 {
+	width: 48px;
+	height: 48px;
+	background-image: url("img/left.svg");
+	background-repeat: no-repeat; 
+	position: absolute;
+	bottom: 16px;
+	right: 277px;
+	top: auto;
+	left: auto;
+	cursor: pointer;
+}
+.slider .swiper-button-prev-1:hover {
+	background-image: url("img/left-hover.svg");
+}
+.slider .swiper-button-next-1 {
+	width: 48px;
+	height: 48px;
+	background-image: url("img/right.svg");
+	background-repeat: no-repeat; 
+	position: absolute;
+	bottom: 16px;
+	right: 221px;
+	top: auto;
+	cursor: pointer;
+}
+.slider .swiper-button-next-1:hover {
+	background-image: url("img/right-hover.svg");
+}
+.swiper-button-prev::after {
+	display: none;
+}
+.swiper-button-next::after {
+	display: none;
+}
+.slider .swiper-wrapper {
+	padding-bottom: 127px;
+} 
+/*** Классы отвечающие за секцию "О студии" ***/
+
+/* Расположение элементов,правой и левой части секции. Позиции шрифты, отступы и тд */
+.studio-box {
+	display: flex;
+	margin: 0 auto;
+    max-width: 1665px;
+	padding-bottom: 64px;
+	margin-top: -17px;
+}
+.studio-box .studio-left img {
+	margin-left: 10px;
+}
+.studio-left {
+	position: relative;
+}
+.studio-mini {
+	position: absolute;
+	top: 433px;
+    left: 435px;
+	cursor: pointer;
+}
+.studio-right {
+	margin-left: 149px;
+	max-width: 804px;
+	width: 100%;
+}
+.studio-right h2{
+	text-align: left;
+}
+.studio-right p{
+	max-width: 685px;
+	width: 100%;
+	margin-bottom: 48px;
+	
+}
+.studio-right-bottom {
+	display: flex;
+	justify-content: space-between;
+}
+.studio-right-bottom span{
+	color: #DA804E;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 100%;
+}
+.studio-right-bottom p{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	max-width: 240px;
+	width: 100%;
+	margin-top: 16px;
+	margin-bottom: 0;
+}
+/*** Классы отвечающие за первую секцию с гридом ***/
+
+/* Обводка цифр границей, параметры грид*/
+.section-why-us-love {
+	padding-top: 4px;
+}
+.why-love-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	row-gap: 45px;
+	column-gap: 35px;
+	
+}
+.why-love-grid p {
+	line-height: 140%;
+	max-width: 260px;
+}
+.why-us-love span {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 100%;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #DA804E;
+}
+.why-us-love p {
+	font-size: 16px;
+	margin: 0;
+}
+.mini-title {
+	font-weight: 500;
+	line-height: 120%;
+	margin: 16px 0 12px 0;
+	max-width: 277px;
+}
+/* text-shadow: 
+		-0   -1px 0   #DA804E,
+		 0   -1px 0   #DA804E,
+		-0    1px 0   #DA804E,
+		 0    1px 0   #DA804E,
+		-1px -0   0   #DA804E,
+		 1px -0   0   #DA804E,
+		-1px  0   0   #DA804E,
+		 1px  0   0   #DA804E,
+		-1px -1px 0   #DA804E,
+		 1px -1px 0   #DA804E,
+		-1px  1px 0   #DA804E,
+		 1px  1px 0   #DA804E,
+		-1px -1px 0   #DA804E,
+		 1px -1px 0   #DA804E,
+		-1px  1px 0   #DA804E,
+		 1px  1px 0   #DA804E;
+	*/
+		 /* created with http://protocoder.ru/css/strokeTextGen */
+		 
+
+
+/*** Классы отвечающие за секцию "Оформите заказ" ***/
+
+/* Позиции элементов, шрифты, отступы, настройка формы */
+.section-order h2, .section-order .subtitle { /* Настройка нескольких классов */
+	text-align: left;
+	margin-left: 0;
+}
+.section-order .subtitle {
+	max-width: 770px;
+}
+.order {
+	display: flex;
+}
+.order-form, .order-img { /* установка одинаковой ширины правой и левой части секции */
+	width: 50%;
+}
+.order-form {
+	padding: 95px 101px;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.order-form form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 4px;
+    margin-left: -4px;
+}
+.order-form input[type=text] {
+	margin-bottom: 24px;
+}
+.order-form input {
+	max-height: 56px
+}
+.order-form input::placeholder {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 100%;
+}
+.order-form textarea::placeholder {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 100%;
+}
+.order-form textarea {
+	max-height: 162px
+}
+.order-form .form-text {
+	margin-bottom: 24px;
+	margin-top: 24px;
+	font-size: 14px;
+	line-height: 120%;
+}
+.order-form .btn {
+	border: none;
+	max-width: 225px;
+}
+.order-form textarea {
+	height: 162px;
+	box-sizing: border-box;
+	resize: none; /* отмена растяжения поля */
+}
+/*** Классы отвечающие за секцию "Фотогалерея" ***/
+
+/* Параметры грид, расстановка фотографий по позициям и ниже настройка появляющейся иконки "Плюсик" */
+.foto-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 27px;
+}
+.foto-item {
+	height: 300px;
+	cursor: pointer;
+	position: relative;
+}
+.foto-item img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover; /*растяжение фото на всю ширину блока*/
+}
+.foto-item:nth-of-type(1) {
+	grid-row-start: 1;
+    grid-row-end: 3;
+	height: auto;
+}
+.foto-item:nth-of-type(2) {
+	grid-column: 2 / span 2;
+}
+.foto-item:nth-of-type(6) {
+	grid-column: 2 / span 2;
+}
+.foto-item:nth-of-type(9) {
+	grid-column-start: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+	height: auto;	
+}
+.foto-item:nth-of-type(10) {
+	grid-column: 1 / span 2;
+}
+.foto-plus {
+	position: absolute;
+	top: 111px;
+	left: 184px;
+	display: none;
+}
+.foto-plus1{
+	position: absolute;
+	top: 274px;
+	left: 184px;
+	display: none;
+}
+.foto-plus2{
+	position: absolute;
+	top: 111px;
+	left: 423px;
+	display: none;
+}
+.foto-item:hover .foto-plus {
+	display: block;
+	animation: hovertext 1s alternate;
+}
+.foto-item:hover .foto-plus1 {
+	display: block;
+	animation: hovertext 1s alternate;
+}
+.foto-item:hover .foto-plus2 {
+	display: block;
+	animation: hovertext 1s alternate;
+}
+
+/* team section */
+.section-team .container {
+	max-width: 1300px;
+}
+.section-team .container .team div {
+	text-align: center;
+}
+.section-team .team {
+	display:flex;
+	justify-content: space-between;
+	margin-top: 80px;
+}
+.section-team .kirill img {
+	max-width: 300px;
+	max-height: 220px;
+}
+.section-team .name {
+	margin-top: 20px;
+	font-weight: 500;
+	color: #493B33;
+}	
+.section-team .profession {
+	color: #da804ea5;
+	font-weight: 400;
+}
+.section-contacts table {
+	max-width: 1100px;
+	width: 100%;
+}
+.section-contacts td {
+	padding: 8px;
+	font-size: 22px;
+	font-weight: 400;
+	color: #DA804E;
+}
+.section-contacts .contacts-name {
+	font-weight: 500;
+	color: #343434;
+}
+.section-reviews .reviews {
+	display: flex;
+	margin-top: 100px;
+}
+.section-reviews .reviews img{
+	width: 100px;
+	max-width: 100%;
+    height: auto;
+	max-height: 140px;
+}
+.section-reviews .reviews-text {
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;	
+}
+.section-reviews .reviews-text span {
+	padding: 2px;
+}
+.section-reviews .name {
+	color: #493B33;
+	font-weight: 500;
+	font-size: 24px;
+}
+.section-reviews .data {
+	color: #DA804E;
+	font-size: 18px;
+}
+.section-reviews .reviews-text-inside {
+	font-size: 20px;
+}
+/*** Классы и тэги отвечающие за нижний колонтитул ***/
+
+
+footer {
+	background-color: #493B33;
+}
+/* top (form) */
+.navigation-footer {
+	color: #fff;
+	font-weight: 300;
+	line-height: 140%;
+	display: flex; 
+	justify-content: space-between;
+	padding-top: 64px;
+	margin-bottom: 64px;
+}
+.navigation-footer p {
+	max-width: 458px;
+    font-size: 16px;
+    font-weight: 300;
+	line-height: 140%;
+	margin: 0 0 24px 0;
+}
+.navigation-footer input[type=text] {
+	max-width: 374px;
+	padding: 16px;
+	background-color: #493B33;
+	border: 1px solid #EBFFFF;
+	border-radius: 6px 0px 0px 6px;
+	border-right-width: 0px;
+	color: #fff;
+}
+.navigation-footer input {
+	max-width: 56px;
+}
+.navigation-footer input::placeholder {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 100%;
+	color: #fff;
+}
+.submit {
+	color: #343434;
+	padding: 17.5px;
+	background-color: #FDE1C8;
+	position: absolute;
+	border: none;
+	border-radius: 0px 6px 6px 0px;
+	cursor: pointer;
+}
+/*  вторичная навигация сайта*/
+.navigation-footer-hover {
+	display: flex;
+	justify-content: space-between;
+	max-width: 246px;
+	width: 100%;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 100%;
+}
+.navigation-footer-hover ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+}
+.navigation-footer-hover li {
+	margin-bottom: 16px;
+	
+}
+.navigation-footer-hover a {
+	color: #fff;
+	text-decoration: none;
+	padding: 8px 0;
+	transition: 0.3s ease-in-out;
+}
+.navigation-footer-hover a:hover {
+	color: #D99455;
+}
+.element_footer {
+ margin-bottom: 16px;	
+}
+
+/* Контакты и кнопка "заказать проект"*/
+.contact-footer {
+	padding: 0 0 32px 0;
+	margin-top: -5px;
+}
+.contact-footer div {
+	margin-bottom: 14px;
+}
+.tel-footer {
+	font-weight: 400;
+	font-size: 20px;	
+}
+.adres-footer {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 100%;
+}
+.contact-footer-box .btn{
+	margin-bottom: 48px;
+	text-align: center;
+}
+/*** Вторая часть нижнего колонтитула ***/
+
+.footer-item {	
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	padding: 16px 0;
+	background-color: #42362F;
+}
+.title-footer {
+	font-weight: 500;
+}
+.footer-mail input:focus {
+	outline: 0;
+	outline-offset: 0;
+}
+.form-box--popup {
+	display: flex;
+	flex-direction: column;
+}
+
+/*** Адаптив ***/
+@media (max-width: 1750px){
+	.container {
+		max-width: 1200px;
+	}
+	.big-container {
+		max-width: 1300px;
+	}
+	.btn {
+		padding: 15px 32px;
+	}
+	.navigation {
+		margin-left: 100px;
+		margin-right: 100px;
+	}	
+	.header-phone {
+		margin-right: 110px;
+	}
+	.about-left {
+		max-width: 610px;
+	}
+	.about-left input {
+		max-width: 175px;
+	}
+/* section decisions */
+	.decisions-img {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.decisions-box .decisions-item {
+		max-width: 280px;
+		font-size: 18px;
+		line-height: 130%;
+	}
+	.decisions-box .decisions-item img {
+		max-width: 280px;
+	}
+	.decisions-box .decisions-sample-bottom-txt {
+		max-width: 185px;
+	}
+	.decisions-box .decisions-bottom {
+		left: 40px;
+	}
+	.decisions-sample-bottom-form .btn {
+		width: 20%;
+		text-align: center;
+		padding-left: 40px;
+		padding-right: 85px;
+	 }
+	.studio-left {
+		margin-left: 50px;
+	}
+	.studio-mini {
+		top: 460px;
+	}
+	.studio-right {
+		margin-left: 50px;
+		margin-right: 50px;		
+	}
+	.studio-right h2 {
+		margin-bottom: 5px;
+	}
+	.studio-right p {
+		margin-bottom: 25px;
+	}
+	.studio-right-bottom p {
+		max-width: 173px;
+	}
+	.why-love-grid {
+		margin-left: 0;
+	}
+	.order-img img {
+		width: 600px;
+		height: 644px;
+	}
+	.foto-plus1 {
+		left: 152px;
+	}
+	.foto-plus2 {
+		left: 356px;
+	}
+	.foto-plus {
+		left: 152px;
+	}
+}
+@media (max-width: 1320px) {
+	.section {
+		margin-top: 100px;
+	}
+	.container {
+		max-width: 1041px;
+	}
+	.big-container {
+		max-width: 1050px;
+	}
+/* header-top */
+	.header-top .navigation {
+		margin-left: 20px;
+		margin-right: 20px;
+		max-width: 370px;
+	}
+	.header-phone {
+		margin-right: 20px;
+	}
+/* section-about */
+	.about-box .top-slider {
+		display: none;
+	}
+	.about-box .about-left {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 930px;
+	}
+	.about-box .about-left form {
+		max-width: 610px;
+	}
+	.about-box .about-left .btn {
+		max-width: 220px;
+	}
+	.about-box .about-left h1 {
+		max-width: max-content;
+		font-size: 75px;
+	}
+/* section-decisions */
+	.decisions-box .decisions-item {
+		margin-bottom: 2px;
+		max-width: 240px;
+	}
+	.decisions-box .decisions-item img {
+		max-width: 240px;
+	}
+	.decisions-box .decisions-sample-bottom-txt {
+		max-width: 185px;
+	}
+	.decisions-box .decisions-bottom {
+		left: 37px;
+	}
+	.decisions-sample-bottom-form .btn {
+		width: 20%;
+		text-align: center;
+		padding-left: 40px;
+		padding-right: 85px;
+	 }
+/* section-popular-positions */
+	.popular-positions .popular-sticker {
+		max-width: max-content;
+		padding: 22px 24px 22px 24px;
+	}
+	.popular-positions .popular-sticker span {
+		max-width: 150px;
+	}
+	.popular-sticker .popular-txt2 {
+		font-size: 13px;
+	}
+	.popular-sticker .popular-txt {
+		font-size: 18px;
+	}
+/*section-studio */
+	.section-studio .studio-box {
+		flex-direction: column-reverse;
+		padding: 0 15px;
+		padding-right: 30px;
+	}
+	.studio-box .studio-right {
+		margin: 0 10px;
+		max-width: 100%;
+	}
+	.studio-right h2 {
+		margin-bottom: 50px;
+	}
+	.studio-right p {
+		max-width: max-content;
+		margin-bottom: 70px;
+	}
+	.studio-box .studio-left {
+		margin: 100px auto 0 18%;
+	}
+	.studio-box .studio-mini {
+		top: 440px;
+		left: 470px;
+	}
+	.studio-right-bottom {
+		justify-content: space-around;
+	}
+	.studio-right-bottom div {
+		max-width: 260px;
+	}
+	.studio-right-bottom p {
+		max-width: 230px;
+	}
+	.section-studio-mini-page {
+		margin-top: 100px;
+	}
+	.section-studio-mini-page h2 {
+		display: none;
+	}
+/* section-why-us-love */
+	.section-why-us-love .why-us-love {
+		margin-left: 10px;
+	}
+	.why-us-love .why-love-grid {
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 35px;
+		column-gap: 70px;
+	}
+/* section-order */
+	.section-order .order {
+		flex-direction: column;
+		align-items: center;
+	}
+	.section-order h2, .section-order .subtitle {
+		margin-left: 12%;
+	}
+	.order .order-img, .order .order-form, .order .order-img img {
+		width: 100%;
+		max-width: 700px;
+	}
+	.order img {
+		height: auto;
+	}
+/* section-foto */
+	.foto-plus1, .foto-plus {
+		left: 125.5px;
+	}
+	.foto-plus2 {
+		left: 303.5px;
+	}
+/* footer */
+	.footer .navigation-footer {
+		margin-right: 25px;
+	}
+}
+@media (max-width: 1000px){
+
+	h2 {
+		font-size: 43px;
+	}
+/* header */
+	.header-top #logo {
+		display: none;
+		
+	}
+	.header-top #logo-mini {
+		display: block;
+		margin-left: 45%;
+	}
+	.header-top .tel {
+		display: none;
+	}
+	.header-top #tel-mini {
+		display: block;
+	}
+	.header-top #tel-mini img {
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top: 21px;
+		right: 27%;
+		
+	}
+	.header-top .navigation {
+		max-width: 410px;
+	}
+	
+/* section about */
+	.section-about .about-box {
+		flex-direction: column;
+	}
+	.about-box .top-slider {
+		display: block;
+		margin-top: 50px;
+	}
+	.about-box .about-left {
+		max-width: 718px;
+	}
+	.about-box .about-left h1 {
+		font-size: 65px;
+		margin-top: -20;
+	}
+/* section-decisions */
+	.decisions-box .decisions-img {
+		justify-content: center;
+	}
+	.decisions-box .decisions-item {
+		max-width: 345px;
+		margin-bottom: 20px;
+		margin-right: 20px;
+	}
+	.decisions-box .decisions-item img {
+		max-width: 345px;
+	}
+	
+/*  section-popular-positions */
+	
+	/* section-studio */
+	.studio-box .studio-left {
+		margin-left: 9%;
+	}
+	.studio-box .studio-mini {
+		left: 400px;
+	}
+/* section-why-us-love */
+	.why-us-love .why-love-grid {
+		grid-template-columns: repeat(2, 1fr);
+		margin-left: 12%;
+	}
+/* section-foto */
+	.foto-item:hover .foto-plus, .foto-item:hover .foto-plus1, .foto-item:hover .foto-plus2 {
+		display: none;
+	}
+/* section-team */
+	.section-team .team {
+	flex-direction: column;
+	align-items: center;
+	}
+	.section-team .team .profession {
+		margin-bottom: 20px;
+	}
+/* footer */
+	.footer .navigation-footer p {
+		max-width: 237px;
+		font-size: 14px;
+	}
+	.footer form {
+		max-width: 200px;
+	}
+	.footer .submit {
+		padding: 17.5px;
+	}
+	.footer .navigation-footer-hover {
+		max-width: 198px;
+		font-size: 16px;
+	}
+	.contact-footer-box .tel-footer {
+		font-size: 18px;
+	}
+	.contact-footer-box .adres-footer {
+		font-size: 12px;
+	}
+	.contact-footer-box .btn {
+		padding: 14px 16px;
+		font-size: 14px;
+	}
+	.popular-img {
+		margin: 0 auto;
+		max-width: 290px;
+	}
+
+}
+@media (max-width: 850px){
+/* header */
+	h2 {
+		font-size: 39px;
+	}
+	.subtitle {
+		font-size: 18px;
+	}
+	.header-top .menu-icon {
+		display: block;
+		position: absolute;
+		top: 26px;
+		right: 0;
+		cursor: pointer;
+	}
+	.header-top .menu-icon img {
+		width: 45px;
+		height: 45px;
+	}
+	.header-top .navigation {
+		display: none;
+		position: absolute;
+		top: 90px;
+		left: 0;
+		background-color: #fff;
+		padding: 18px;
+		margin: 0;
+		width: 100%;
+		box-sizing: border-box;
+		max-width: 100%;
+		z-index: 10;
+	}
+	.header-top .navigation a {
+		display: inline-block;
+		width: 100%;
+		border: none;
+	}
+	.header-top .navigation a:hover {
+		border: none;
+	}
+	.header-top .header-order {
+		display: none;
+	}
+	.header-top #tel-mini img {
+		right: 8%;
+	}
+	
+/* section-about */
+	.about-box .about-left form {
+		max-width: 400px;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto 0 auto;
+	}
+	.about-box .about-left input {
+		margin-bottom: 11px;
+		max-height: 52px;
+		max-width: 736px;
+		margin-right: 0;
+	}
+	.about-box .about-left .btn2 {
+		padding: 17px;
+	}
+	.about-box .top-slider {
+		margin-top: 160px;
+	}
+	.about-box .about-left h1, .about-box .about-left p {
+		text-align: center;
+	}
+/* section-popular-positions */
+	.popular-positions .popular-sticker {
+	    top: 216px;
+		left: 190px;
+	}
+	.popular-positions .swiper-button-next-1 {
+	    right: 17px;
+	}
+	.popular-positions .swiper-button-prev-1 {
+	    right: 77px;
+	}
+	
+/* section-section-studio */
+	.studio-box .studio-left-img img {
+		max-width: 100%;
+	}
+	.studio-box .studio-left-img {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+	.studio-box .studio-mini {
+		left: -50px;
+		top: -56px;
+	}
+	.studio-box .studio-right .studio-text {
+		font-size: 18px;
+		margin-bottom: 50px;
+	}
+	.studio-box .studio-right-bottom {
+		justify-content: space-around;
+	}
+	.studio-box .studio-right-bottom span {
+		font-size: 44px;
+	}
+	.studio-box .studio-right-bottom p {
+		max-width: 150px;
+		font-size: 14px;
+	}
+	
+/* section-why-us-love */
+	.why-us-love .why-love-grid {
+		margin-left: 4%;
+	}
+	.why-us-love .why-love-grid span {
+		font-size: 44px;
+	}
+	.why-us-love .why-love-grid .mini-title {
+		font-size: 16px;
+	}
+	.why-us-love .why-love-grid p {
+		font-size: 14px;
+	}
+	
+/* section-foto */
+	.section-foto .foto-grid {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 12px;
+	}
+	.foto-grid .foto-item {
+		height: 300px;
+	}
+	
+/*section-order */
+
+	.section-order-contacts .order-form {
+		padding: 74px 40px;
+	}
+/* footer */
+	.footer .navigation-footer {
+		justify-content: center;
+	}
+	.navigation-footer .footer-mail {
+		display: none;
+	}
+	.navigation-footer .navigation-footer-hover {
+		margin-right: 70px;
+		margin-left: 30px;
+	}
+}
+@media (max-width: 550px){
+	.section {
+		margin-top: 50px;
+	}
+		h2 {
+		font-size: 32px;
+	}
+	.subtitle {
+		font-size: 17px;
+	}
+	.content-page h1 { 
+		font-size: 46px;
+	}
+/* header */
+	.header-top #logo-mini {
+		display: block;
+		margin-left: 0%;
+	}
+	.header-top #tel-mini img {
+		right: 12%;
+	}
+/* section-about */
+	.about-box .about-left h1 {
+		font-size: 40px;
+		text-align: center;
+	}
+	.about-box .about-left form {
+		margin: 0 auto 0 auto;
+		max-width: auto;
+	}
+	.about-box .about-left p {
+		text-align: center;
+	}
+/* section-decisions */
+	.decisions-box .decisions-item {
+		max-width: 300px;
+		margin-right: -9px;
+	}
+	.decisions-box .decisions-item img {
+		max-width: 300px;
+	}
+/* section-popular-position */
+	.popular-img img  {
+		max-width: 100%;
+		height: auto;
+	}
+	.popular-positions .popular-sticker {
+		position: absolute;
+		top: 75%;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	.popular-positions .slider {
+		max-width: 442px;
+	}
+	.popular-positions .swiper-button-next-1 {
+		top: auto;
+		bottom: 0px;
+	}
+	.popular-positions .swiper-button-prev-1 {
+		top: auto;
+		bottom: 0px;
+	}
+	
+/* section-studio */
+	.studio-box .studio-right-bottom {
+		flex-direction: column;
+	}
+	.studio-box .studio-right-bottom div {
+		margin: 0 auto;
+	}
+	.studio-box .studio-right-bottom div p {
+		max-width: max-content;
+	}
+	.studio-box .studio-left-img {
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.studio-box .studio-mini img {
+		margin-left: 20px;
+		max-width: 170px;
+	}
+
+/* section-why-us-love */
+	.why-us-love .why-love-grid {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 10%;
+	}
+/* section-order */
+	.order .order-form {
+		padding: 15px;
+	}
+	.order .order-img img {
+    height: 450px;
+	}
+/* section-foto */
+	.section-foto .foto-grid {
+		display: flex;
+		flex-direction: column;
+	}
+	.foto-grid .foto-item {
+		height: 300px;
+	}
+/* section-team */
+	.section-team .team {
+	font-size: 18px;
+	}
+	
+/* section-reviews */
+
+	.section-reviews .reviews {
+	display: flex;
+	flex-direction: column;
+	}
+	.section-reviews .reviews-text {
+		margin-left: 0;
+		margin-top: 27px;
+	}
+	
+/* footer */
+	.navigation-footer .navigation-footer-hover {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		line-height: 110%;
+		margin-right: 5px;
+		margin-left: 5px;
+		max-width: 117px;
+	}
+	.footer .navigation-footer {
+	    margin-right: 0;
+	}	
+	.form-box--popup .btn {
+    margin-left: 0%;
+	}
+	.section-contacts td {
+	font-size: 14px;
+	padding: 2px
+	}
+}
+
+
+
