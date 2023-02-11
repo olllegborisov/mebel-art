@@ -1248,7 +1248,7 @@ footer {
 	}
 	.about-box .about-left h1 {
 		font-size: 65px;
-		margin-top: -20;
+		margin-top: 0px;
 	}
 /* section-decisions */
 	.decisions-box .decisions-img {
